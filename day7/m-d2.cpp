@@ -3,7 +3,7 @@
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
-// Pointer ¾²±â 
+// Pointer ì“°ê¸° 
 
 //int main(int argc, char *argv[]) {
 //	float f = 3.14;
@@ -26,19 +26,19 @@ int main(int argc, char *argv[]) {
 	char b = 'S';
 	double c = 2.1;
 	
-	//  Æ÷ÀÎÅÍ º¯¼ö ¼±¾ğ°ú ÃÊ±â°ªÀ» ÇÒ´ÙÇÑ´Ù
+	//  í¬ì¸í„° ë³€ìˆ˜ ì„ ì–¸ê³¼ ì´ˆê¸°ê°’ì„ í• ë‹¤í•œë‹¤
 	int *intp = &a;
 	
-	// *intp ´Â left¿¡ ¿À¸é °ø°£ *intp°¡ ¿À¸¥ÂÊ¿¡ ¿À¸é °ªÀ» ÀÇ¹ÌÇÑ´Ù
+	// *intp ëŠ” leftì— ì˜¤ë©´ ê³µê°„ *intpê°€ ì˜¤ë¥¸ìª½ì— ì˜¤ë©´ ê°’ì„ ì˜ë¯¸í•œë‹¤
 	char *charp = &b;
 	double *doublep = &c;
 	
-	// °¢ Æ÷ÀÎÅÍ¿¡ ÀúÀåµÈ °ªÀ» Ãâ·ÂÇÑ´Ù 
+	// ê° í¬ì¸í„°ì— ì €ì¥ëœ ê°’ì„ ì¶œë ¥í•œë‹¤ 
 	printf("a=%p\n", intp);
 	printf("b=%p\n", charp);
 	printf("c=%p\n", doublep);
 	
-	// °¢ Æ÷ÀÎÅÍ°¡ °¡¸®Å°´Â °ªÀ» Ãâ·ÂÇÑ´Ù
+	// ê° í¬ì¸í„°ê°€ ê°€ë¦¬í‚¤ëŠ” ê°’ì„ ì¶œë ¥í•œë‹¤
 	printf("*intp = %d\n", *intp); 
 	printf("*charp = %c\n", *charp); 
 	printf("*doublep = %d\n", *doublep); 
