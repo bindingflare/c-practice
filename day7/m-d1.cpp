@@ -12,18 +12,18 @@ int main(int argc, char *argv[]) {
 	int* pb = &b;
 	printf("%d at %p\n", *pb, pb);
 	
-	// pbÀÇ ÁÖ¼Ò Ãâ·Â
+	// pbì˜ ì£¼ì†Œ ì¶œë ¥
 	printf("location of pb: %p\n", &pb);
 	
-	int** ppb; // Æ÷ÀÎÅÍÀÇ Æ÷ÀÎÅÍÀÇ º¯¼ö
+	int** ppb; // í¬ì¸í„°ì˜ í¬ì¸í„°ì˜ ë³€ìˆ˜
 	ppb = &pb;
 	
 	printf("%p at %p\n", &pb, &ppb); 
 	
-	// pb °ª Ãâ·Â
+	// pb ê°’ ì¶œë ¥
 	printf("value: %p\n", *ppb); 
 	
-	// pb °ªÀÇ °¡¸®Å°°íÀÖ´Â ½ÇÁ¦ °ªÀ» Ãâ·Â
+	// pb ê°’ì˜ ê°€ë¦¬í‚¤ê³ ìˆëŠ” ì‹¤ì œ ê°’ì„ ì¶œë ¥
 	printf("value: %d", **ppb);
 	
 	return 0;
