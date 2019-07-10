@@ -108,11 +108,4 @@ int main(int argc, char *argv[]) {
 	printf("sumb = %d\n", b[6]);
 	printf("avga = %d\n", a[6]);
 	printf("avga = %d\n", b[7]);
-	
-	int sum = 0;
-	
-	for(i = 0; i < 5; i++) {
-		
-	}	
-	
 }
