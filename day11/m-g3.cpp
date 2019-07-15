@@ -57,7 +57,9 @@ int main(int argc, char *argv[]) {
 	
 	int *arr[4] = {arr1, arr2, arr3, arr4};
 	
-	printf("%d", arr[1][1]);
+	printf("%d\n", arr[1][1]);
+	printf("%d\n", *(*(arr + 1) + 3));
+	printf("%d\n", *(*arr + 1));
 	
 	return 0;
 }
