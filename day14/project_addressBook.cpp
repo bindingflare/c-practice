@@ -109,10 +109,10 @@ void SelOne(int rsize, struct data *Book1) {
 	system("pause"); // 화면 진행 멈춤 아무키나 누르면 프로그램 진행 
 }
 
-//void SelTwo(int, struct data*); 
-//void SelThree(int, struct data*); 
-//void SelFour(int, struct data*); 
-//void SelFive(int, struct data*); 
+//void SelTwo(int, struct data *Book1); 
+//void SelThree(int, struct data *Book1); 
+//void SelFour(int, struct data *Book1); 
+//void SelFive(int, struct data *Book1); 
 
 int Cnt_data(int rsize) { // 58
 	int Cnt;
