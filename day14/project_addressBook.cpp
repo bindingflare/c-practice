@@ -4,10 +4,10 @@
 #include <process.h>
 
 #define _FILE_ "addrbook.dat"
-
+//
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
-// ÇÁ·ÎÁ§Æ® 2 - Address Book 
+// í”„ë¡œì íŠ¸ 2 - Address Book 
 
 struct data {
 	char cName[10];
@@ -24,81 +24,81 @@ void SelFour(int, struct data*);
 void SelFive(int, struct data*); 
 
 int main(int argc, char *argv[]) {
-	char cBtn; // ¸Þ´º¸¦ ÀÔ·Â ¹ÞÀ» º¯¼ö 
+	char cBtn; // ë©”ë‰´ë¥¼ ìž…ë ¥ ë°›ì„ ë³€ìˆ˜ 
 	int rsize = sizeof(struct data); // 58 byte
 	
-	struct data *Book1; // ±¸Á¶Ã¼ Æ÷ÀÎÅÍ º¯¼ö ¼±¾ð 
+	struct data *Book1; // êµ¬ì¡°ì²´ í¬ì¸í„° ë³€ìˆ˜ ì„ ì–¸ 
 	struct data *Book2;
 	
 	printf("%d", rsize);
 	
 	while(1) {
-		int Lec = Cnt_data(rsize); // ÆÄÀÏ ¿­±â, ÀÎ¿ø¼ö 
+		int Lec = Cnt_data(rsize); // íŒŒì¼ ì—´ê¸°, ì¸ì›ìˆ˜ 
 		Book1 = (struct data*)(malloc(1 * sizeof(struct data))); // 58
 		Book2 - (struct data*)(malloc(Lec * sizeof(struct data))); 
 		
-		system("cls"); // ¸í·É ÇÁ·ÒÆ® clear screen
+		system("cls"); // ëª…ë ¹ í”„ë¡¬íŠ¸ clear screen
 		
-		printf("±¸Á¶Ã¼ Å©±â : %d\n", rsize);
-		printf("µ¥ÀÌÅÍ °¹¼ö : %d\n", Lec);
+		printf("êµ¬ì¡°ì²´ í¬ê¸° : %d\n", rsize);
+		printf("ë°ì´í„° ê°¯ìˆ˜ : %d\n", Lec);
 		
-		if(Lec != 0) { // 1¸íÀÌ¶óµµ ÁÖ¼Ò·Ï Áö·á°¡ ÀÖÀ¸¸é 
-			printf("1. ÀÚ·áÀÔ·Â\n");
-			printf("2. ÀÚ·á°Ë»ö\n");
-			printf("3. ÀÚ·á¼öÁ¤\n");
-			printf("4. ÀÚ·á»èÁ¦\n");
-			printf("5. ÀÚ·áÁ¶È¸\n");
-			printf("0. Á¾·á\n");
-			printf("¼±ÅÃÇÏ¼¼¿ä : ");
+		if(Lec != 0) { // 1ëª…ì´ë¼ë„ ì£¼ì†Œë¡ ì§€ë£Œê°€ ìžˆìœ¼ë©´ 
+			printf("1. ìžë£Œìž…ë ¥\n");
+			printf("2. ìžë£Œê²€ìƒ‰\n");
+			printf("3. ìžë£Œìˆ˜ì •\n");
+			printf("4. ìžë£Œì‚­ì œ\n");
+			printf("5. ìžë£Œì¡°íšŒ\n");
+			printf("0. ì¢…ë£Œ\n");
+			printf("ì„ íƒí•˜ì„¸ìš” : ");
 			scanf("%c", &cBtn); 
 		} else {
 			cBtn = '1';
 		}
 		
 		if(cBtn == '1') {
-			// ÀÔ·Â
+			// ìž…ë ¥
 			system("cls");
 			
-			SelOne(rsize, Book1); // ÀÔ·ÂÇÔ¼ö È£Ãâ 
+			SelOne(rsize, Book1); // ìž…ë ¥í•¨ìˆ˜ í˜¸ì¶œ 
 		} else if(cBtn == '2') {
-			// °Ë»ö
+			// ê²€ìƒ‰
 		} else if(cBtn == '3') {
-			// ¼öÁ¤ 
+			// ìˆ˜ì • 
 		} else if(cBtn == '4') {
-			// »èÁ¦ 
+			// ì‚­ì œ 
 		} else if(cBtn == '5') {
-			// Á¶È¸ 
+			// ì¡°íšŒ 
 		} else if(cBtn == '0') {
-			// Á¾·á 
+			// ì¢…ë£Œ 
 		} else {
-			printf("´Ù½ÃÀÔ·Â\n");
-			continue; // ¹Ýº¹ÀÇ ³¡À¸·Î 
+			printf("ë‹¤ì‹œìž…ë ¥\n");
+			continue; // ë°˜ë³µì˜ ëìœ¼ë¡œ 
 		}
 	}
 	
 	return 0;
 }
 
-// ÀÎ¿ø ¼ö °è»ê 
+// ì¸ì› ìˆ˜ ê³„ì‚° 
 void SelOne(int rsize, struct data *Book1) {
-	//  ÀÔ·Â¹Þ¾Æ ±¸Á¶Ã¼¿¡ ³Ö±â 
-	// ÆÄÀÏ ¿­°í »õÁ¤º¸¸¦ ¾²°í ÆÄÀÏ ´Ý±â 
+	//  ìž…ë ¥ë°›ì•„ êµ¬ì¡°ì²´ì— ë„£ê¸° 
+	// íŒŒì¼ ì—´ê³  ìƒˆì •ë³´ë¥¼ ì“°ê³  íŒŒì¼ ë‹«ê¸° 
 	FILE *fsave;
 	
-	//ÆÄÀÏ¿­°í ÀÔ·Â ¹Þ¾Æ ÆÄÀÏ¿¡ ¾²°í ÆÄÀÏÀ» ´ã±â
-	fflush(stdin); // ÀÔÃâ·Â½Ã »ç¿ëµÇ´Â ¹öÆÛÀÇ ÀÚ·á¸¦ Áö¿ì±â
+	//íŒŒì¼ì—´ê³  ìž…ë ¥ ë°›ì•„ íŒŒì¼ì— ì“°ê³  íŒŒì¼ì„ ë‹´ê¸°
+	fflush(stdin); // ìž…ì¶œë ¥ì‹œ ì‚¬ìš©ë˜ëŠ” ë²„í¼ì˜ ìžë£Œë¥¼ ì§€ìš°ê¸°
 	
-	printf("\nÀÌ¸§ [8ÀÚ ÀÌ³»] : ");
+	printf("\nì´ë¦„ [8ìž ì´ë‚´] : ");
 	gets(Book1 -> cName); 
 	 
-	printf("\nÀüÈ­¹øÈ£ [16ÀÚ ÀÌ³»] : ");
+	printf("\nì „í™”ë²ˆí˜¸ [16ìž ì´ë‚´] : ");
 	gets(Book1 -> cTel); 
 	
-	printf("\n ÁÖ¼Ò [24ÀÚ ÀÌ³»]");
+	printf("\n ì£¼ì†Œ [24ìž ì´ë‚´]");
 	gets(Book1 -> cAddr);
 	
 	if(strlen(Book1 -> cName) < 1 || strlen(Book1 -> cTel) < 1 || strlen(Book1 -> cAddr) < 1) {
-		printf("ÀÔ·ÂÁß ÇÏ³ªÀÌ»ó ¾Æ¹°·± ÀÔ·ÂÀÌ ¾ø¾î ÁÖ¼Ò·Ï¿¡  ÀúÀåÇÏÁö ¾Ê¾Ò½À´Ï´Ù");
+		printf("ìž…ë ¥ì¤‘ í•˜ë‚˜ì´ìƒ ì•„ë¬¼ëŸ° ìž…ë ¥ì´ ì—†ì–´ ì£¼ì†Œë¡ì—  ì €ìž¥í•˜ì§€ ì•Šì•˜ìŠµë‹ˆë‹¤");
 	} else {
 		fsave = fopen(_FILE_, "w+");
 		fwrite(Book1, rsize, 1, fsave);
@@ -106,7 +106,7 @@ void SelOne(int rsize, struct data *Book1) {
 		fclose(fsave);
 	}
 	
-	system("pause"); // È­¸é ÁøÇà ¸ØÃã ¾Æ¹«Å°³ª ´©¸£¸é ÇÁ·Î±×·¥ ÁøÇà 
+	system("pause"); // í™”ë©´ ì§„í–‰ ë©ˆì¶¤ ì•„ë¬´í‚¤ë‚˜ ëˆ„ë¥´ë©´ í”„ë¡œê·¸ëž¨ ì§„í–‰ 
 }
 
 //void SelTwo(int, struct data*); 
@@ -118,13 +118,13 @@ int Cnt_data(int rsize) { // 58
 	int Cnt;
 	FILE *fload = fopen(_FILE_, "r");
 	
-	if(fload == NULL) { // ÆÄÀÏ¿¡ ¾Æ¹« ÀÚ·á ¾øÀ» ¶§ 
+	if(fload == NULL) { // íŒŒì¼ì— ì•„ë¬´ ìžë£Œ ì—†ì„ ë•Œ 
 		Cnt = 0;
-	} else { // ÆÄÀÏ¿¡ ÀÚ·á°¡ ÀÖÀ» ¶§ 
+	} else { // íŒŒì¼ì— ìžë£Œê°€ ìžˆì„ ë•Œ 
 		fseek(fload, -1, SEEK_END);
 		
-		// ÀÚ·á¸¦ »ç¿ëÇÏ±â À§ÇØ À§Ä¡¸¦ Àâ¾Æ ÁØ´Ù
-		Cnt = (ftell(fload)/ rsize) + 1; // ÀüÃ¼ ÀÎ¿ø¼ö + 1
+		// ìžë£Œë¥¼ ì‚¬ìš©í•˜ê¸° ìœ„í•´ ìœ„ì¹˜ë¥¼ ìž¡ì•„ ì¤€ë‹¤
+		Cnt = (ftell(fload)/ rsize) + 1; // ì „ì²´ ì¸ì›ìˆ˜ + 1
 		fclose(fload); 
 	}
 	
