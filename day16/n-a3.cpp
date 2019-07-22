@@ -26,8 +26,11 @@ int main(int argc, char** argv) {
 //
 //	cout << *ap;
 
-	int a = 5;
-	KK(a); // 5 값 
+	// const 이해 
+	const int a = 5;
+	
+	a = a + 10;
+	//KK(a); // 5 값 
 	
 	cout << "a= " << a << endl;
 
