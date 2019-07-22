@@ -4,20 +4,20 @@ using namespace std;
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
-int a = 1; // Àü¿ª º¯¼ö 
+int a = 1; // ì „ì—­ ë³€ìˆ˜ 
 
-class Date { // Å¬·¡½º 
-	int month; // ¸â¹ö º¯¼ö
+class Date { // í´ë˜ìŠ¤ 
+	int month; // ë©¤ë²„ ë³€ìˆ˜
 	int day;
 	
-	static int year; // Å¬·¡½º ¸â¹ö º¯¼ö 
+	static int year; // í´ë˜ìŠ¤ ë©¤ë²„ ë³€ìˆ˜ 
 	
 	public :
-		// »ı¼ºÀÚ : ÇÔ¼ö, ÇÔ¼ö 
+		// ìƒì„±ì : í•¨ìˆ˜, í•¨ìˆ˜ 
 		Date(int m = 0, int d = 0):month(m), day(d) {}
 		
 	static void Title() {
-		cout << "³â" << "\t" << "¿ù" << "\t" << "ÀÏ" << endl; 
+		cout << "ë…„" << "\t" << "ì›”" << "\t" << "ì¼" << endl; 
 	}
 	
 	void Disp();	
@@ -30,16 +30,16 @@ void Date::Disp() {
 }
 
 int main(int argc, char** argv) {
-//	int a = 5;// Áö¿ª º¯¼ö
+//	int a = 5;// ì§€ì—­ ë³€ìˆ˜
 //	{
-//		int a = 10; // ÀÌ ºí·Ï¼Ó¿¡¸¸ ¾²´Â º¯¼ö (ºí·Ï º¯¼ö) 
+//		int a = 10; // ì´ ë¸”ë¡ì†ì—ë§Œ ì“°ëŠ” ë³€ìˆ˜ (ë¸”ë¡ ë³€ìˆ˜) 
 //		a += ::a; // a = 10 + 1 = 11
 //		::a += a; // a = 1 + 11 = 12
 //		
 //		cout << ::a << "\t" << a << endl; 
 //	 } 
 //	
-//	cout << ::a << "\t" << a << endl; // ÀÌ a´Â Áö¿ª º¯¼ö a 
+//	cout << ::a << "\t" << a << endl; // ì´ aëŠ” ì§€ì—­ ë³€ìˆ˜ a 
 
 	Date Kor(3, 1);
 	
