@@ -4,7 +4,7 @@ using namespace std;
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
 class Complex {
-	public: // Á¢±Ù Á¦¾îÀÚ
+	public: // ì ‘ê·¼ ì œì–´ì
 		double m_x;
 		double m_i;
 	
