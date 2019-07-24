@@ -3,7 +3,7 @@ using namespace std;
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
-// ÇÔ¼ö ¿À¹ö·Îµù 
+// í•¨ìˆ˜ ì˜¤ë²„ë¡œë”©
 
 int sum(int, int);
 int sum(int, int, int);
